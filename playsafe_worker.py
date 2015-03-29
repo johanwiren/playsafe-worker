@@ -34,7 +34,7 @@ class Job(object):
         self.client.save_job(self)
 
     def json(self):
-        return json.dumps(self.__dict__)
+        return json.dumps(dict((k,v) for (k,v) in self.__dict__.iteritems() if k != 'client'))
 
 
 if __name__ == '__main__':
@@ -58,9 +58,10 @@ if __name__ == '__main__':
                 command = job.command.split()
                 command.append("%s/%s" % (output_dir, job.filename))
                 print "Command: %s " % command
-                if subprocess.call(command) == 0:
+                try:
+                    subprocess.check_call(command)
                     job.status = "Completed"
-                else:
+                except subprocess.CalledProcessError:
                     job.status = "Failed"
                 job.save()
-            time.sleep(1)
+            time.sleep(10)
