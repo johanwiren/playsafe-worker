@@ -6,7 +6,7 @@ deploy:
   provider: s3
   access_key_id: AKIAJFMAQS24LL3P7HAQ
   secret_access_key:
-    secure: AXkJRkLsT2GaCJF9fVMtgSeRnk32UX/7NN2WpZDl7e8gRERHyQvjMS/eWhkGErl4SFHYhtFzkEhwIDi4YUgQrIF6i2h7V4qb68rcZtLfRbM8DThecboy4g1pOZ1YydDC8mgGlON0vImX4fy9TOZYLI6ku67+BUnR11FELW8sOn8=
+    secure: "AUJU0pv7nqOpBEfkQdXg9UpXDqtTfKw1Vozwxe9oeN1IkjkwM0d0Nkn5FvfNPe3sf6L/qkUi0xsbM9ztCVzhcxoQBCd7Fy8k/+dqTUwKbu3oOD6lYrSOrFPOYe9bDzvE095rUpbl5G5NiOu+bGx0a1BPSMx9KldTcwrwkyEujIo="
   bucket: s3.johanwiren.se
   region: eu-west-1
   endpoint: s3.johanwiren.se.s3-website-eu-west-1.amazonaws.com
